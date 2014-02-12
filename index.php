@@ -16,9 +16,9 @@ try {
     $api = new API($config);
 
     //Define parameters for our getMethod request
-    $args = [
+    $args = array(
         'showTimezone' => 1
-    ];
+    );
 
     //Makes request to the getMonitor Method
     $results = $api->request('/getMonitors', $args);
