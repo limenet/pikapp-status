@@ -1,0 +1,3 @@
+[submodule "PHP-UptimeRobot"]
+	path = PHP-UptimeRobot
+	url = git@github.com:ckdarby/PHP-UptimeRobot.git
