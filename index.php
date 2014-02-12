@@ -1,6 +1,6 @@
 <?php
 //Requires composer install to work
-require_once(__DIR__.'/vendor/autoload.php');
+require_once('/PHP-UptimeRobot/src/UptimeRobot/API.php');
 
 use UptimeRobot\API;
 
