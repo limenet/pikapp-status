@@ -1,8 +1,6 @@
 <?php
 
-namespace UptimeRobot;
-
-class API
+class UptimeRobotAPI
 {
 
     private $url, $contents;
