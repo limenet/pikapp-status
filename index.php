@@ -48,7 +48,6 @@ switch ($status) {
     default:
         $text = 'paused';
         $color = 'grey';
-        # code...
         break;
 }
 ?>
