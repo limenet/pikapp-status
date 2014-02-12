@@ -5,10 +5,10 @@ require_once('/PHP-UptimeRobot/src/UptimeRobot/API.php');
 use UptimeRobot\API;
 
 //Set configuration settings
-$config = [
+$config = array(
     'apiKey' => 'm775682179-dbdadbde5e38295028240b7c',
     'url' => 'http://api.uptimerobot.com'
-];
+);
 
 try {
 
