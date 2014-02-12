@@ -89,12 +89,12 @@ class API
      */
     private function setDebug($curl)
     {
-        $this->debug = [
+        $this->debug = array(
             'errorNum' => curl_errno($curl),
             'error' => curl_error($curl),
             'info' => curl_getinfo($curl),
             'raw' => $this->contents,
-        ];
+        );
 
     }
 }
