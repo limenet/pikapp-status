@@ -1,4 +1,9 @@
 <?php
+
+if (!function_exists('curl_init')) {
+    throw new Exception('APP needs the cURL PHP extension.');
+}
+
 //Requires composer install to work
 require_once(__DIR__.'/UptimeRobot_API.php');
 
