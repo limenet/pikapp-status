@@ -1,0 +1,43 @@
+[
+    {
+        "name": "ckdarby/php-uptimerobot",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ckdarby/PHP-UptimeRobot.git",
+            "reference": "5a523efdfed72bfae7f1fe8b9aa8d2fd43365968"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ckdarby/PHP-UptimeRobot/zipball/5a523efdfed72bfae7f1fe8b9aa8d2fd43365968",
+            "reference": "5a523efdfed72bfae7f1fe8b9aa8d2fd43365968",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "php": ">=5.4.0"
+        },
+        "time": "2013-10-25 04:47:45",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "UptimeRobot": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Cory Kennedy-Darby",
+                "email": "ckdarby+uptimerobotapi@gmail.com",
+                "homepage": "https://github.com/ckdarby/"
+            }
+        ],
+        "description": "PHP Wrapper for UptimeRobot.com API",
+        "homepage": "https://github.com/ckdarby/PHP-UptimeRobot/"
+    }
+]

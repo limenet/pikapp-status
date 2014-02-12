@@ -1,0 +1,5 @@
+{
+    "require": {
+        "ckdarby/php-uptimerobot": "dev-master"
+    }
+}
