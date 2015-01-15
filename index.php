@@ -5,19 +5,21 @@ if (!function_exists('curl_init')) {
 }
 
 //Requires composer install to work
-require_once(__DIR__.'/UptimeRobot_API.php');
+require_once(__DIR__.'/vendor/autoload.php');
+
+use UptimeRobot\API;
 
 
 //Set configuration settings
 $config = array(
-    'apiKey' => 'm775682179-dbdadbde5e38295028240b7c',
+    'apiKey' => 'm776065506-7de96c4fb4595bd6aefce078',
     'url' => 'http://api.uptimerobot.com'
 );
 
 try {
 
     //Initalizes API with config options
-    $api = new UptimeRobotAPI($config);
+    $api = new API($config);
 
     //Define parameters for our getMethod request
     $args = array(
