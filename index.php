@@ -31,7 +31,7 @@ try {
 
     //Output json_decoded contents
     $status = $results['monitors']['monitor'][0]['status'];
-
+    $uptime = $results['monitors']['monitor'][0]['alltimeuptimeratio'];
 } catch (Exception $e) {
     echo $e->getMessage();
     //Output various debug information
@@ -70,15 +70,9 @@ switch ($status) {
     <title>[pikapp] Status</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
-    <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"> -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
 
-
-    <!-- Custom styles for this template -->
-    <link href="starter-template.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -86,35 +80,43 @@ switch ($status) {
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
+        /*
+        http://www.google.ch/design/spec/style/color.html#color-color-palette
+        bg: 500;
+        text: 700;
+         */
         .container {
             padding-top: 40px;
         }
         .bg-status-grey{
-            background-color: #95a5a6;
+            background-color: #9E9E9E;
         }
         .bg-status-green{
-            background-color: #2ecc71;
+            background-color: #4CAF50;
         }
         .bg-status-orange{
-            background-color: #e67e22;
+            background-color: #FF9800;
         }
         .bg-status-red{
-            background-color: #e74c3c;
+            background-color: #F44336;
         }
 
         .text-status-grey{
-            color: #7f8c8d;
+            color: #616161;
         }
         .text-status-green{
-            color: #27ae60;
+            color: #388E3C;
         }
         .text-status-orange{
-            color: #d35400;
+            color: #F57C00;
         }
         .text-status-red{
-            color: #c0392b;
+            color: #D32F2F;
         }
         h1{
+            font-size: 200px;
+        }
+        h2{
             font-size: 100px;
         }
     </style>
@@ -127,6 +129,7 @@ switch ($status) {
         <div class="row">
             <div class="col-md-12 text-center">
                 <h1 class="text-status-<?=$color?>">pikapp is <?=strtoupper($text)?></h1>
+                <h2 class="text-status-<?=$color?>"><?=$uptime?>%</h2>
             </div>
         </div>
 
