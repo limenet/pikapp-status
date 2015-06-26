@@ -70,7 +70,8 @@ switch ($status) {
     <title>[pikapp] Status</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Source+Code+Pro' rel='stylesheet' type='text/css'>
     <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
 
 
@@ -88,30 +89,33 @@ switch ($status) {
         .container {
             padding-top: 40px;
         }
-        .bg-status-grey{
+        .bg-status-grey {
             background-color: #9E9E9E;
         }
-        .bg-status-green{
+        .bg-status-green {
             background-color: #4CAF50;
         }
-        .bg-status-orange{
+        .bg-status-orange {
             background-color: #FF9800;
         }
-        .bg-status-red{
+        .bg-status-red {
             background-color: #F44336;
         }
 
-        .text-status-grey{
+        .text-status-grey {
             color: #616161;
         }
-        .text-status-green{
+        .text-status-green {
             color: #388E3C;
         }
-        .text-status-orange{
+        .text-status-orange {
             color: #F57C00;
         }
-        .text-status-red{
+        .text-status-red {
             color: #D32F2F;
+        }
+        .text-monospace {
+            font-family: "Source Code Pro", "Consolas", monospace;
         }
         h1{
             font-size: 200px;
@@ -119,6 +123,10 @@ switch ($status) {
         h2{
             font-size: 100px;
         }
+        body {
+            font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+        }
+
     </style>
   </head>
 
@@ -129,17 +137,10 @@ switch ($status) {
         <div class="row">
             <div class="col-md-12 text-center">
                 <h1 class="text-status-<?=$color?>">pikapp is <?=strtoupper($text)?></h1>
-                <h2 class="text-status-<?=$color?>"><?=$uptime?>%</h2>
+                <h2 class="text-status-<?=$color?> text-monospace"><?=$uptime?>%</h2>
             </div>
         </div>
 
     </div><!-- /.container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <!-- <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script> -->
   </body>
 </html>
