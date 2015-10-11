@@ -1,5 +1,5 @@
 <?php
-require_once('vendor/autoload.php');
+require_once 'vendor/autoload.php';
 
 use UptimeRobot\API;
 
@@ -7,7 +7,7 @@ use UptimeRobot\API;
 //Set configuration settings
 $config = [
     'apiKey' => 'm776065506-7de96c4fb4595bd6aefce078',
-    'url'    => 'https://api.uptimerobot.com'
+    'url'    => 'https://api.uptimerobot.com',
 ];
 
 try {
