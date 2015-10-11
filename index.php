@@ -3,7 +3,6 @@ require_once 'vendor/autoload.php';
 
 use UptimeRobot\API;
 
-
 //Set configuration settings
 $config = [
     'apiKey' => 'm776065506-7de96c4fb4595bd6aefce078',
