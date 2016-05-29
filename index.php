@@ -38,7 +38,7 @@ switch ($status) {
         $text = 'pikapp is DOWN. Sorry!';
         $color = 'red';
         break;
-    case '-1';
+    case '-1':
         $uptime = '&mdash;';
         $responseTime = '&mdash;';
     case '0':
