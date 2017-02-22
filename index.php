@@ -3,15 +3,14 @@ require_once 'vendor/autoload.php';
 
 use \Curl\Curl;
 
-
 try {
     $curl = new Curl();
     $curl->post('https://api.uptimerobot.com/v2/getMonitors',
         [
-            'api_key' => 'm776065506-7de96c4fb4595bd6aefce078',
-            'format' => 'json',
-            'response_times' => true,
-            'timezone' => true,
+            'api_key'              => 'm776065506-7de96c4fb4595bd6aefce078',
+            'format'               => 'json',
+            'response_times'       => true,
+            'timezone'             => true,
             'custom_uptime_ratios' => '1',
         ]
     );
