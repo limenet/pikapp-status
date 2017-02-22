@@ -1,26 +1,29 @@
 <?php
 require_once 'vendor/autoload.php';
 
-use UptimeRobot\API;
+use \Curl\Curl;
 
-//Set configuration settings
-$config = [
-    'apiKey' => 'm776065506-7de96c4fb4595bd6aefce078',
-    'url'    => 'https://api.uptimerobot.com',
-];
 
 try {
+    $curl = new Curl();
+    $curl->post('https://api.uptimerobot.com/v2/getMonitors',
+        [
+            'api_key' => 'm776065506-7de96c4fb4595bd6aefce078',
+            'format' => 'json',
+            'response_times' => true,
+            'timezone' => true,
+            'custom_uptime_ratios' => '1',
+        ]
+    );
 
-    //Initalizes API with config options
-    $api = new API($config);
-
-    //Makes request to the getMonitor Method
-    $results = $api->request('/getMonitors', ['showTimezone' => 1, 'responseTimes' => 1]);
+    if ($curl->error) {
+        throw new Exception();
+    }
 
     //Output json_decoded contents
-    $status = $results['monitors']['monitor'][0]['status'];
-    $uptime = $results['monitors']['monitor'][0]['alltimeuptimeratio'].'%';
-    $responseTime = $results['monitors']['monitor'][0]['responsetime'][0]['value'].'ms';
+    $status = $curl->response->monitors[0]->status;
+    $uptime = $curl->response->monitors[0]->custom_uptime_ratio.'%';
+    $responseTime = $curl->response->monitors[0]->average_response_time.'ms';
 } catch (Exception $e) {
     $status = -1;
 }

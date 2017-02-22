@@ -1,5 +1,5 @@
 {
     "require": {
-        "ckdarby/php-uptimerobot": "dev-master"
+        "php-curl-class/php-curl-class": "^7.2"
     }
 }

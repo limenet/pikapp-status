@@ -48,5 +48,4 @@ node_modules
 .CVS
 .idea
 
-composer.lock
-vendor
+/vendor/
